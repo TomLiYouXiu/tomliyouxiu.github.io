@@ -79,6 +79,9 @@
 
 <p>主题的设置：Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
 ]]></content>
+      <categories>
+        <category>shell</category>
+      </categories>
       <tags>
         <tag>教程</tag>
       </tags>
@@ -139,6 +142,9 @@
                      
                 ></p>
 ]]></content>
+      <categories>
+        <category>搭建记录</category>
+      </categories>
       <tags>
         <tag>记录</tag>
       </tags>
