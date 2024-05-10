@@ -150,6 +150,94 @@
       </tags>
   </entry>
   <entry>
+    <title>你好贾维斯</title>
+    <url>/2024/05/10/%E4%BD%A0%E5%A5%BD%E8%B4%BE%E7%BB%B4%E6%96%AF/</url>
+    <content><![CDATA[<h1 id="Hello，Jarvis"><a href="#Hello，Jarvis" class="headerlink" title="Hello，Jarvis"></a>Hello，Jarvis</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/708523c1da6b1f58c8d838d4d20dcac3695af3ed.jpg"
+                      alt="708523c1da6b1f58c8d838d4d20dcac3695af3ed.jpg"
+                ></p>
+<h1 id="视频地址"><a href="#视频地址" class="headerlink" title="视频地址"></a><a class="link"   href="https://www.bilibili.com/video/BV1vC411j7En" >视频地址 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我心中的真正的人工智能的样子？</p>
+<blockquote>
+<p>在我心中，理想的人工智能是类似于电影《钢铁侠》中的贾维斯那样的存在。它不仅是一个高效的助手，可以处理各种复杂的任务，而且还能理解和预测我的需求，提供个性化的帮助。它具有自我学习和改进的能力，可以通过与我互动来不断提高其服务质量。更重要的是，这样的人工智能应具备一定的情感理解能力，能够理解人类的情绪，并在与人类的交互中表现出适当的情感反馈。最后，我希望这样的人工智能在满足所有这些功能的同时，还能够严格遵守数据安全和隐私保护的原则，让我在使用的过程中感到安心。</p>
+</blockquote>
+<p>现在人工智能的一大主要问题</p>
+<blockquote>
+<p>现在的人工智能（AI）在进行系统级操作方面存在一定的限制。这个问题主要体现在以下几个方面：</p>
+<ol>
+<li><p><strong>理解和实施复杂任务</strong>：虽然AI可以学习和执行一些特定的、有限的任务，但它们往往在理解和实施复杂、多步骤的任务时遇到困难。例如，AI可能能够理解单个指令，如“打开文件”或“搜索信息”，但可能无法理解或执行更复杂的指令，如“整理这个文件夹并删除所有旧的文件”。</p>
+</li>
+<li><p><strong>长期记忆和知识转移</strong>：当前的AI系统通常缺乏有效的长期记忆机制，这意味着它们可能无法记住过去的操作或学习经验，并将这些知识应用到新的任务中。这使得AI难以进行系统级的操作，因为这些操作通常需要对过去的信息进行整合和利用。</p>
+</li>
+<li><p><strong>安全性和隐私问题</strong>：AI进行系统级操作可能会涉及到敏感的信息和关键的系统资源。然而，现有的AI技术可能无法确保这些信息和资源的安全，因为它们可能被恶意利用，或者在无意中泄露用户的隐私。</p>
+</li>
+<li><p><strong>缺乏通用性</strong>：许多AI系统都是为特定的任务或环境设计的，而不是为广泛的系统级操作设计的。这意味着，尽管这些系统在特定的任务或环境中可能表现良好，但在其他环境或任务中可能表现不佳。</p>
+</li>
+</ol>
+<p>这些问题都是AI进行系统级操作的主要障碍。然而，随着AI技术的不断发展，我期待这些问题在未来得到解决。</p>
+</blockquote>
+<h1 id="项目推荐"><a href="#项目推荐" class="headerlink" title="项目推荐"></a>项目推荐</h1><p>GitHub地址：<a class="link"   href="https://github.com/OpenInterpreter/open-interpreter" >OpenInterpreter&#x2F;open-interpreter: A natural language interface for computers (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>官网：<a class="link"   href="https://www.openinterpreter.com/" >The Open Interpreter Project <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h2><p>why interpreter</p>
+<blockquote>
+<p>借助大语言模型，Open Interpreter 可在本地运行代码（Python、Javascript、Shell 等），帮你执行各种任务。</p>
+<p>它可以在本机调用 GPT-4, GPT-3.5，或者开源免费的 CodeLlama 模型。</p>
+<p>安装以后，每次只要打开终端，输入 “interpreter” 这个命令以后，就可以打开类似于 ChatGPT 的聊天界面。</p>
+<p>所不同的是，它并不像代码解释器那样是一个封闭的环境。它可以联网，也可以和本地文件交互，因此你不需要上传文件进行分析。而且，如果在分析过程中如果它缺少某些 Python 库，可以联网自行下载。</p>
+<p>此外，其他的对于上传文件的大小是有限制的，但 Open Interpreter 却可以和你电脑上任意大的文件进行交互。因此，它对于处理文件非常方便。</p>
+</blockquote>
+<h1 id="极简部署安装"><a href="#极简部署安装" class="headerlink" title="极简部署安装"></a>极简部署安装</h1><blockquote>
+<p>较为推荐使用此方法+key</p>
+</blockquote>
+<p>Linux上部署</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install open-interpreter</span><br></pre></td></tr></table></figure></div>
+
+<p>Windows上部署</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install open-interpreter</span><br></pre></td></tr></table></figure></div>
+
+<p>mac上部署</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">pip install open-interpreter</span><br></pre></td></tr></table></figure></div>
+
+<p>api的配置</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">OPENAI_API_KEY</span><br><span class="line">OPENAI_API_BASE</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="使用本地模型"><a href="#使用本地模型" class="headerlink" title="使用本地模型"></a>使用本地模型</h1><blockquote>
+<p>不是很推荐</p>
+</blockquote>
+<p>以ollama举例</p>
+<p>首先安装ollama</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Download Ollama - https://ollama.ai/download</span><br></pre></td></tr></table></figure></div>
+
+<p>ollama启动某个模型</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ollama run qwen:14b</span><br></pre></td></tr></table></figure></div>
+
+<p>本地模型启动</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">interpreter --model ollama/qwen:14b</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="使用Litellm做接口访问"><a href="#使用Litellm做接口访问" class="headerlink" title="使用Litellm做接口访问"></a>使用Litellm做接口访问</h1><blockquote>
+<p>次推荐</p>
+</blockquote>
+<p>LiteLLM的功能就一句话：使用 OpenAI 格式调用所有 LLM API [Bedrock、Huggingface、VertexAI、TogetherAI、Azure、OpenAI 等]，具体包括：</p>
+<ul>
+<li>将输入转换为提供者的<code>completion</code>、<code>embedding</code>和<code>image_generation</code>端点</li>
+<li><a class="link"   href="https://link.zhihu.com/?target=https://docs.litellm.ai/docs/completion/output" >一致的输出 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，文本响应将始终可用<code>[&#39;choices&#39;][0][&#39;message&#39;][&#39;content&#39;]</code></li>
+<li>跨多个部署（例如 Azure&#x2F;OpenAI）的重试&#x2F;回退逻辑 -<a class="link"   href="https://link.zhihu.com/?target=https://docs.litellm.ai/docs/routing" >路由器 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>设置每个项目的预算和费率限制、API 密钥、模型<a class="link"   href="https://link.zhihu.com/?target=https://docs.litellm.ai/docs/simple_proxy" >OpenAI 代理服务器 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p>项目地址：<a class="link"   href="https://github.com/BerriAI/litellm" >BerriAI&#x2F;litellm: Call all LLM APIs using the OpenAI format. Use Bedrock, Azure, OpenAI, Cohere, Anthropic, Ollama, Sagemaker, HuggingFace, Replicate (100+ LLMs) (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h1><ul>
+<li><input disabled="" type="checkbox"> 接入语音</li>
+</ul>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>费曼学习法的自我认识</title>
     <url>/2024/05/09/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95%E7%9A%84%E8%87%AA%E6%88%91%E8%AE%A4%E8%AF%86/</url>
     <content><![CDATA[<h1 id="费曼学习方法的自我认识"><a href="#费曼学习方法的自我认识" class="headerlink" title="费曼学习方法的自我认识"></a>费曼学习方法的自我认识</h1><p><img  
