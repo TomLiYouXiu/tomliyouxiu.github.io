@@ -1,152 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>shell终端美化</title>
-    <url>/2024/05/08/shell%E7%BB%88%E7%AB%AF%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="打造酷帅的最强shell终端，效率直接快100倍！！！"><a href="#打造酷帅的最强shell终端，效率直接快100倍！！！" class="headerlink" title="打造酷帅的最强shell终端，效率直接快100倍！！！"></a>打造酷帅的最强shell终端，效率直接快100倍！！！</h1><h2 id="什么是shell？"><a href="#什么是shell？" class="headerlink" title="什么是shell？"></a>什么是shell？</h2><p>​		Shell 终端，也被称为命令行接口或控制台，是一种交互式用户界面，允许用户通过键入命令来与操作系统进行交互。</p>
-<p>​		在 Shell 终端中，用户可以执行各种各样的操作，例如管理文件和目录，运行程序，监控系统状态，配置系统设置，等等。这些操作都是通过键入特定的命令来实现的。</p>
-<p>​		Shell 终端的名称来源于 “shell”，这是一个用于描述用户和操作系统内核之间的接口的术语。Shell 提供了一个解释和执行用户命令的环境，而终端则是用户与 shell 交互的界面。</p>
-<p>​		在 Unix 和类 Unix 系统（如 Linux）中，常见的 shell 包括 Bourne shell（sh）、Bourne Again shell（bash）、C shell（csh）、Korn shell（ksh）等。在 Windows 系统中，常见的 shell 包括命令提示符（cmd）和 PowerShell。</p>
-<p>​		总的来说，Shell 终端是进行系统管理和开发工作的重要工具，对于理解操作系统的工作原理和进行高效的工作都非常有帮助。</p>
-<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>​		一个支持全彩的终端，我使用的是Windows terminal</p>
-<h3 id="Windows-terminal"><a href="#Windows-terminal" class="headerlink" title="Windows terminal"></a>Windows terminal</h3><p>​		Windows Terminal 是微软开发的一个新的、现代的、功能丰富的、开源的终端应用程序，用于访问命令行工具和 shell，如 Command Prompt、PowerShell 和 WSL (Windows Subsystem for Linux)。它于 2019 年首次发布，旨在提供一个集中的位置，用户可以访问多种命令行接口。</p>
-<p>以下是 Windows Terminal 的一些主要特性：</p>
+    <title>dify接入微信</title>
+    <url>/2024/05/14/dify%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1/</url>
+    <content><![CDATA[<h1 id="一、Dify简介"><a href="#一、Dify简介" class="headerlink" title="一、Dify简介"></a>一、Dify简介</h1><p><strong>项目官网</strong>：<a class="link"   href="https://dify.ai/zh" >Dify.AI · 生成式 AI 应用创新引擎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>Dify</strong> 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后端即服务（Backend as Service）和 <a class="link"   href="https://docs.dify.ai/v/zh-hans/learn-more/extended-reading/what-is-llmops" >LLMOps <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的理念，使开发者可以快速搭建生产级的生成式 AI 应用。即使你是非技术人员，也能参与到 AI 应用的定义和数据运营过程中。</p>
+<p>由于 Dify 内置了构建 LLM 应用所需的关键技术栈，包括对数百个模型的支持、直观的 Prompt 编排界面、高质量的 RAG 引擎以及灵活的 Agent 框架，并同时提供了一套易用的界面和 API。这为开发者节省了许多重复造轮子的时间，使其可以专注在创新和业务需求上。</p>
+<h3 id="为什么使用-Dify？"><a href="#为什么使用-Dify？" class="headerlink" title="为什么使用 Dify？"></a>为什么使用 Dify？</h3><p>你或许可以把 LangChain 这类的开发库（Library）想象为有着锤子、钉子的工具箱。与之相比，Dify 提供了更接近生产需要的完整方案，Dify 好比是一套脚手架，并且经过了精良的工程设计和软件测试。</p>
+<p>重要的是，Dify 是<strong>开源</strong>的，它由一个专业的全职团队和社区共同打造。你可以基于任何模型自部署类似 Assistants API 和 GPTs 的能力，在灵活的安全的基础上，同时保持对数据的完全控制。</p>
+<blockquote>
+<p>我们的社区用户对 Dify 的产品评价可以归结为简单、克制、迭代迅速。 ——路宇，Dify.AI CEO</p>
+</blockquote>
+<p>希望以上信息和这份指南可以帮助你了解这款产品，我们相信 Dify 是为你而做的（Do It For You）。</p>
+<h3 id="Dify-能做什么？"><a href="#Dify-能做什么？" class="headerlink" title="Dify 能做什么？"></a>Dify 能做什么？</h3><p>Dify 一词源自 Define + Modify，意指定义并且持续的改进你的 AI 应用，它是为你而做的（Do it for you）。</p>
+<ul>
+<li><strong>创业</strong>，快速的将你的 AI 应用创意变成现实，无论成功和失败都需要加速。在真实世界，已经有几十个团队通过 Dify 构建 MVP（最小可用产品）获得投资，或通过 POC（概念验证）赢得了客户的订单。</li>
+<li><strong>将 LLM 集成至已有业务</strong>，通过引入 LLM 增强现有应用的能力，接入 Dify 的 RESTful API 从而实现 Prompt 与业务代码的解耦，在 Dify 的管理界面是跟踪数据、成本和用量，持续改进应用效果。</li>
+<li><strong>作为企业级 LLM 基础设施</strong>，一些银行和大型互联网公司正在将 Dify 部署为企业内的 LLM 网关，加速 GenAI 技术在企业内的推广，并实现中心化的监管。</li>
+<li><strong>探索 LLM 的能力边界</strong>，即使你是一个技术爱好者，通过 Dify 也可以轻松的实践 Prompt 工程和 Agent 技术，在 GPTs 推出以前就已经有超过 60,000 开发者在 Dify 上创建了自己的第一个应用。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/image-9jkv.png"
+                      alt="image-9jkv.png"
+                ></p>
+<h1 id="二、Dify-on-WeChat"><a href="#二、Dify-on-WeChat" class="headerlink" title="二、Dify on WeChat"></a>二、Dify on WeChat</h1><p><strong>项目地址</strong>：<a class="link"   href="https://github.com/hanfangyuan4396/dify-on-wechat.git" >https://github.com/hanfangyuan4396/dify-on-wechat.git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>项目为 <a class="link"   href="https://github.com/zhayujie/chatgpt-on-wechat" >chatgpt-on-wechat <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>下游分支</p>
+<p>额外对接了LLMOps平台 <a class="link"   href="https://github.com/langgenius/dify" >Dify <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，支持Dify智能助手模型，调用工具和知识库，支持Dify工作流。</p>
+<p>如果作者的项目对您有帮助请帮助作者点一个star吧~</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/image-95t6.png"
+                      alt="image-95t6.png"
+                ></p>
+<h1 id="三、部署"><a href="#三、部署" class="headerlink" title="三、部署"></a>三、部署</h1><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>首先需要一台服务器，推荐浪浪云服务器：高防，稳定，有保障！！！</p>
+<p>浪浪云限时活动推荐：</p>
+<ul>
+<li><a class="link"   href="https://blog.langlangy.com/archives/apifree" >公益免费大模型接口–无需再为api付费 | 浪浪云技术栈 (langlangy.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://blog.langlangy.com/archives/bphd" >浪浪云白嫖服务器活动 | 浪浪云技术栈 (langlangy.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<h3 id="Dify的搭建："><a href="#Dify的搭建：" class="headerlink" title="Dify的搭建："></a>Dify的搭建：</h3><p>1.可以参考官方的教程：</p>
+<p>2.如果不想这么麻烦的话可以使用浪浪云的一键部署<a class="link"   href="https://blog.langlangy.com/archives/dify" >Dify知识库可接入全场大模型【一.搭建演示篇】 | 浪浪云技术栈 (langlangy.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/image-fe3n.png"
+                      alt="image-fe3n.png"
+                ></p>
+<h3 id="升级Dify版本"><a href="#升级Dify版本" class="headerlink" title="升级Dify版本"></a>升级Dify版本</h3><p>购买完浪浪云的服务器后可能会出现Dify的版本较低，此时我们升级版本即可</p>
+<p>1.远程连接浪浪云服务器<a class="link"   href="https://langlangy.com/news/detail/support/9" >Linux服务器登陆教程 - 浪浪云：提供高性能、可靠稳定的云服务器解决方案 (langlangy.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>2.挨个执行命令</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入对应的目录</span></span><br><span class="line"><span class="built_in">cd</span> <span class="comment">#返回根目录</span></span><br><span class="line"><span class="built_in">cd</span> dify/docker/ <span class="comment">#进入对应的文件夹</span></span><br><span class="line">vi docker-compose.yaml <span class="comment">#编辑对应的文件信息，或者删除文件，新建也可</span></span><br><span class="line">docker compose down <span class="comment">#停止容器</span></span><br><span class="line">docker compose pull <span class="comment">#拉取新的镜像</span></span><br><span class="line">docker compose up -d <span class="comment">#启动容器</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>docker-compose.yaml</strong>文件内容，可能存在一定的时效性，目前2024年5月8日13:59:54[处于最新版]，也可到项目的官网进行复制对应的文件</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="comment"># API service</span></span><br><span class="line">  <span class="attr">api:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">langgenius/dify-api:0.6.6</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># Startup mode, &#x27;api&#x27; starts the API server.</span></span><br><span class="line">      <span class="attr">MODE:</span> <span class="string">api</span></span><br><span class="line">      <span class="comment"># The log level for the application. Supported values are `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`</span></span><br><span class="line">      <span class="attr">LOG_LEVEL:</span> <span class="string">INFO</span></span><br><span class="line">      <span class="comment"># A secret key that is used for securely signing the session cookie and encrypting sensitive information on the database. You can generate a strong key using `openssl rand -base64 42`.</span></span><br><span class="line">      <span class="attr">SECRET_KEY:</span> <span class="string">sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U</span></span><br><span class="line">      <span class="comment"># The base URL of console application web frontend, refers to the Console base URL of WEB service if console domain is</span></span><br><span class="line">      <span class="comment"># different from api or web app domain.</span></span><br><span class="line">      <span class="comment"># example: http://cloud.dify.ai</span></span><br><span class="line">      <span class="attr">CONSOLE_WEB_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># Password for admin user initialization.</span></span><br><span class="line">      <span class="comment"># If left unset, admin user will not be prompted for a password when creating the initial admin account.</span></span><br><span class="line">      <span class="attr">INIT_PASSWORD:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># The base URL of console application api server, refers to the Console base URL of WEB service if console domain is</span></span><br><span class="line">      <span class="comment"># different from api or web app domain.</span></span><br><span class="line">      <span class="comment"># example: http://cloud.dify.ai</span></span><br><span class="line">      <span class="attr">CONSOLE_API_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># The URL prefix for Service API endpoints, refers to the base URL of the current API service if api domain is</span></span><br><span class="line">      <span class="comment"># different from console domain.</span></span><br><span class="line">      <span class="comment"># example: http://api.dify.ai</span></span><br><span class="line">      <span class="attr">SERVICE_API_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># The URL prefix for Web APP frontend, refers to the Web App base URL of WEB service if web app domain is different from</span></span><br><span class="line">      <span class="comment"># console or api domain.</span></span><br><span class="line">      <span class="comment"># example: http://udify.app</span></span><br><span class="line">      <span class="attr">APP_WEB_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># File preview or download Url prefix.</span></span><br><span class="line">      <span class="comment"># used to display File preview or download Url to the front-end or as Multi-model inputs;</span></span><br><span class="line">      <span class="comment"># Url is signed and has expiration time.</span></span><br><span class="line">      <span class="attr">FILES_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># When enabled, migrations will be executed prior to application startup and the application will start after the migrations have completed.</span></span><br><span class="line">      <span class="attr">MIGRATION_ENABLED:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="comment"># The configurations of postgres database connection.</span></span><br><span class="line">      <span class="comment"># It is consistent with the configuration in the &#x27;db&#x27; service below.</span></span><br><span class="line">      <span class="attr">DB_USERNAME:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">DB_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="attr">DB_HOST:</span> <span class="string">db</span></span><br><span class="line">      <span class="attr">DB_PORT:</span> <span class="number">5432</span></span><br><span class="line">      <span class="attr">DB_DATABASE:</span> <span class="string">dify</span></span><br><span class="line">      <span class="comment"># The configurations of redis connection.</span></span><br><span class="line">      <span class="comment"># It is consistent with the configuration in the &#x27;redis&#x27; service below.</span></span><br><span class="line">      <span class="attr">REDIS_HOST:</span> <span class="string">redis</span></span><br><span class="line">      <span class="attr">REDIS_PORT:</span> <span class="number">6379</span></span><br><span class="line">      <span class="attr">REDIS_USERNAME:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">REDIS_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="attr">REDIS_USE_SSL:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="comment"># use redis db 0 for redis cache</span></span><br><span class="line">      <span class="attr">REDIS_DB:</span> <span class="number">0</span></span><br><span class="line">      <span class="comment"># The configurations of celery broker.</span></span><br><span class="line">      <span class="comment"># Use redis as the broker, and redis db 1 for celery broker.</span></span><br><span class="line">      <span class="attr">CELERY_BROKER_URL:</span> <span class="string">redis://:difyai123456@redis:6379/1</span></span><br><span class="line">      <span class="comment"># Specifies the allowed origins for cross-origin requests to the Web API, e.g. https://dify.app or * for all origins.</span></span><br><span class="line">      <span class="attr">WEB_API_CORS_ALLOW_ORIGINS:</span> <span class="string">&#x27;*&#x27;</span></span><br><span class="line">      <span class="comment"># Specifies the allowed origins for cross-origin requests to the console API, e.g. https://cloud.dify.ai or * for all origins.</span></span><br><span class="line">      <span class="attr">CONSOLE_CORS_ALLOW_ORIGINS:</span> <span class="string">&#x27;*&#x27;</span></span><br><span class="line">      <span class="comment"># CSRF Cookie settings</span></span><br><span class="line">      <span class="comment"># Controls whether a cookie is sent with cross-site requests,</span></span><br><span class="line">      <span class="comment"># providing some protection against cross-site request forgery attacks</span></span><br><span class="line">      <span class="comment">#</span></span><br><span class="line">      <span class="comment"># Default: `SameSite=Lax, Secure=false, HttpOnly=true`</span></span><br><span class="line">      <span class="comment"># This default configuration supports same-origin requests using either HTTP or HTTPS,</span></span><br><span class="line">      <span class="comment"># but does not support cross-origin requests. It is suitable for local debugging purposes.</span></span><br><span class="line">      <span class="comment">#</span></span><br><span class="line">      <span class="comment"># If you want to enable cross-origin support,</span></span><br><span class="line">      <span class="comment"># you must use the HTTPS protocol and set the configuration to `SameSite=None, Secure=true, HttpOnly=true`.</span></span><br><span class="line">      <span class="comment">#</span></span><br><span class="line">      <span class="comment"># The type of storage to use for storing user files. Supported values are `local` and `s3` and `azure-blob` and `google-storage`, Default: `local`</span></span><br><span class="line">      <span class="attr">STORAGE_TYPE:</span> <span class="string">local</span></span><br><span class="line">      <span class="comment"># The path to the local storage directory, the directory relative the root path of API service codes or absolute path. Default: `storage` or `/home/john/storage`.</span></span><br><span class="line">      <span class="comment"># only available when STORAGE_TYPE is `local`.</span></span><br><span class="line">      <span class="attr">STORAGE_LOCAL_PATH:</span> <span class="string">storage</span></span><br><span class="line">      <span class="comment"># The S3 storage configurations, only available when STORAGE_TYPE is `s3`.</span></span><br><span class="line">      <span class="attr">S3_ENDPOINT:</span> <span class="string">&#x27;https://xxx.r2.cloudflarestorage.com&#x27;</span></span><br><span class="line">      <span class="attr">S3_BUCKET_NAME:</span> <span class="string">&#x27;difyai&#x27;</span></span><br><span class="line">      <span class="attr">S3_ACCESS_KEY:</span> <span class="string">&#x27;ak-difyai&#x27;</span></span><br><span class="line">      <span class="attr">S3_SECRET_KEY:</span> <span class="string">&#x27;sk-difyai&#x27;</span></span><br><span class="line">      <span class="attr">S3_REGION:</span> <span class="string">&#x27;us-east-1&#x27;</span></span><br><span class="line">      <span class="comment"># The Azure Blob storage configurations, only available when STORAGE_TYPE is `azure-blob`.</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_ACCOUNT_NAME:</span> <span class="string">&#x27;difyai&#x27;</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_ACCOUNT_KEY:</span> <span class="string">&#x27;difyai&#x27;</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_CONTAINER_NAME:</span> <span class="string">&#x27;difyai-container&#x27;</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_ACCOUNT_URL:</span> <span class="string">&#x27;https://&lt;your_account_name&gt;.blob.core.windows.net&#x27;</span></span><br><span class="line">      <span class="comment"># The Google storage configurations, only available when STORAGE_TYPE is `google-storage`.</span></span><br><span class="line">      <span class="attr">GOOGLE_STORAGE_BUCKET_NAME:</span> <span class="string">&#x27;yout-bucket-name&#x27;</span></span><br><span class="line">      <span class="attr">GOOGLE_STORAGE_SERVICE_ACCOUNT_JSON_BASE64:</span> <span class="string">&#x27;your-google-service-account-json-base64-string&#x27;</span></span><br><span class="line">      <span class="comment"># The type of vector store to use. Supported values are `weaviate`, `qdrant`, `milvus`, `relyt`.</span></span><br><span class="line">      <span class="attr">VECTOR_STORE:</span> <span class="string">weaviate</span></span><br><span class="line">      <span class="comment"># The Weaviate endpoint URL. Only available when VECTOR_STORE is `weaviate`.</span></span><br><span class="line">      <span class="attr">WEAVIATE_ENDPOINT:</span> <span class="string">http://weaviate:8080</span></span><br><span class="line">      <span class="comment"># The Weaviate API key.</span></span><br><span class="line">      <span class="attr">WEAVIATE_API_KEY:</span> <span class="string">WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih</span></span><br><span class="line">      <span class="comment"># The Qdrant endpoint URL. Only available when VECTOR_STORE is `qdrant`.</span></span><br><span class="line">      <span class="attr">QDRANT_URL:</span> <span class="string">http://qdrant:6333</span></span><br><span class="line">      <span class="comment"># The Qdrant API key.</span></span><br><span class="line">      <span class="attr">QDRANT_API_KEY:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="comment"># The Qdrant client timeout setting.</span></span><br><span class="line">      <span class="attr">QDRANT_CLIENT_TIMEOUT:</span> <span class="number">20</span></span><br><span class="line">      <span class="comment"># The Qdrant client enable gRPC mode.</span></span><br><span class="line">      <span class="attr">QDRANT_GRPC_ENABLED:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="comment"># The Qdrant server gRPC mode PORT.</span></span><br><span class="line">      <span class="attr">QDRANT_GRPC_PORT:</span> <span class="number">6334</span></span><br><span class="line">      <span class="comment"># Milvus configuration Only available when VECTOR_STORE is `milvus`.</span></span><br><span class="line">      <span class="comment"># The milvus host.</span></span><br><span class="line">      <span class="attr">MILVUS_HOST:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">      <span class="comment"># The milvus host.</span></span><br><span class="line">      <span class="attr">MILVUS_PORT:</span> <span class="number">19530</span></span><br><span class="line">      <span class="comment"># The milvus username.</span></span><br><span class="line">      <span class="attr">MILVUS_USER:</span> <span class="string">root</span></span><br><span class="line">      <span class="comment"># The milvus password.</span></span><br><span class="line">      <span class="attr">MILVUS_PASSWORD:</span> <span class="string">Milvus</span></span><br><span class="line">      <span class="comment"># The milvus tls switch.</span></span><br><span class="line">      <span class="attr">MILVUS_SECURE:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="comment"># relyt configurations</span></span><br><span class="line">      <span class="attr">RELYT_HOST:</span> <span class="string">db</span></span><br><span class="line">      <span class="attr">RELYT_PORT:</span> <span class="number">5432</span></span><br><span class="line">      <span class="attr">RELYT_USER:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">RELYT_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="attr">RELYT_DATABASE:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="comment"># Mail configuration, support: resend, smtp</span></span><br><span class="line">      <span class="attr">MAIL_TYPE:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># default send from email address, if not specified</span></span><br><span class="line">      <span class="attr">MAIL_DEFAULT_SEND_FROM:</span> <span class="string">&#x27;YOUR EMAIL FROM (eg: no-reply &lt;no-reply@dify.ai&gt;)&#x27;</span></span><br><span class="line">      <span class="attr">SMTP_SERVER:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">SMTP_PORT:</span> <span class="number">587</span></span><br><span class="line">      <span class="attr">SMTP_USERNAME:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">SMTP_PASSWORD:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">SMTP_USE_TLS:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="comment"># the api-key for resend (https://resend.com)</span></span><br><span class="line">      <span class="attr">RESEND_API_KEY:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">RESEND_API_URL:</span> <span class="string">https://api.resend.com</span></span><br><span class="line">      <span class="comment"># The DSN for Sentry error reporting. If not set, Sentry error reporting will be disabled.</span></span><br><span class="line">      <span class="attr">SENTRY_DSN:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># The sample rate for Sentry events. Default: `1.0`</span></span><br><span class="line">      <span class="attr">SENTRY_TRACES_SAMPLE_RATE:</span> <span class="number">1.0</span></span><br><span class="line">      <span class="comment"># The sample rate for Sentry profiles. Default: `1.0`</span></span><br><span class="line">      <span class="attr">SENTRY_PROFILES_SAMPLE_RATE:</span> <span class="number">1.0</span></span><br><span class="line">      <span class="comment"># Notion import configuration, support public and internal</span></span><br><span class="line">      <span class="attr">NOTION_INTEGRATION_TYPE:</span> <span class="string">public</span></span><br><span class="line">      <span class="attr">NOTION_CLIENT_SECRET:</span> <span class="string">you-client-secret</span></span><br><span class="line">      <span class="attr">NOTION_CLIENT_ID:</span> <span class="string">you-client-id</span></span><br><span class="line">      <span class="attr">NOTION_INTERNAL_SECRET:</span> <span class="string">you-internal-secret</span></span><br><span class="line">      <span class="comment"># The sandbox service endpoint.</span></span><br><span class="line">      <span class="attr">CODE_EXECUTION_ENDPOINT:</span> <span class="string">&quot;http://sandbox:8194&quot;</span></span><br><span class="line">      <span class="attr">CODE_EXECUTION_API_KEY:</span> <span class="string">dify-sandbox</span></span><br><span class="line">      <span class="attr">CODE_MAX_NUMBER:</span> <span class="number">9223372036854775807</span></span><br><span class="line">      <span class="attr">CODE_MIN_NUMBER:</span> <span class="number">-9223372036854775808</span></span><br><span class="line">      <span class="attr">CODE_MAX_STRING_LENGTH:</span> <span class="number">80000</span></span><br><span class="line">      <span class="attr">TEMPLATE_TRANSFORM_MAX_LENGTH:</span> <span class="number">80000</span></span><br><span class="line">      <span class="attr">CODE_MAX_STRING_ARRAY_LENGTH:</span> <span class="number">30</span></span><br><span class="line">      <span class="attr">CODE_MAX_OBJECT_ARRAY_LENGTH:</span> <span class="number">30</span></span><br><span class="line">      <span class="attr">CODE_MAX_NUMBER_ARRAY_LENGTH:</span> <span class="number">1000</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># Mount the storage directory to the container, for storing user files.</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./volumes/app/storage:/app/api/storage</span></span><br><span class="line">    <span class="comment"># uncomment to expose dify-api port to host</span></span><br><span class="line">    <span class="comment"># ports:</span></span><br><span class="line">    <span class="comment">#   - &quot;5001:5001&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># worker service</span></span><br><span class="line">  <span class="comment"># The Celery worker for processing the queue.</span></span><br><span class="line">  <span class="attr">worker:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">langgenius/dify-api:0.6.6</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># Startup mode, &#x27;worker&#x27; starts the Celery worker for processing the queue.</span></span><br><span class="line">      <span class="attr">MODE:</span> <span class="string">worker</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># --- All the configurations below are the same as those in the &#x27;api&#x27; service. ---</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># The log level for the application. Supported values are `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`</span></span><br><span class="line">      <span class="attr">LOG_LEVEL:</span> <span class="string">INFO</span></span><br><span class="line">      <span class="comment"># A secret key that is used for securely signing the session cookie and encrypting sensitive information on the database. You can generate a strong key using `openssl rand -base64 42`.</span></span><br><span class="line">      <span class="comment"># same as the API service</span></span><br><span class="line">      <span class="attr">SECRET_KEY:</span> <span class="string">sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U</span></span><br><span class="line">      <span class="comment"># The configurations of postgres database connection.</span></span><br><span class="line">      <span class="comment"># It is consistent with the configuration in the &#x27;db&#x27; service below.</span></span><br><span class="line">      <span class="attr">DB_USERNAME:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">DB_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="attr">DB_HOST:</span> <span class="string">db</span></span><br><span class="line">      <span class="attr">DB_PORT:</span> <span class="number">5432</span></span><br><span class="line">      <span class="attr">DB_DATABASE:</span> <span class="string">dify</span></span><br><span class="line">      <span class="comment"># The configurations of redis cache connection.</span></span><br><span class="line">      <span class="attr">REDIS_HOST:</span> <span class="string">redis</span></span><br><span class="line">      <span class="attr">REDIS_PORT:</span> <span class="number">6379</span></span><br><span class="line">      <span class="attr">REDIS_USERNAME:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">REDIS_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="attr">REDIS_DB:</span> <span class="number">0</span></span><br><span class="line">      <span class="attr">REDIS_USE_SSL:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="comment"># The configurations of celery broker.</span></span><br><span class="line">      <span class="attr">CELERY_BROKER_URL:</span> <span class="string">redis://:difyai123456@redis:6379/1</span></span><br><span class="line">      <span class="comment"># The type of storage to use for storing user files. Supported values are `local` and `s3` and `azure-blob`, Default: `local`</span></span><br><span class="line">      <span class="attr">STORAGE_TYPE:</span> <span class="string">local</span></span><br><span class="line">      <span class="attr">STORAGE_LOCAL_PATH:</span> <span class="string">storage</span></span><br><span class="line">      <span class="comment"># The S3 storage configurations, only available when STORAGE_TYPE is `s3`.</span></span><br><span class="line">      <span class="attr">S3_ENDPOINT:</span> <span class="string">&#x27;https://xxx.r2.cloudflarestorage.com&#x27;</span></span><br><span class="line">      <span class="attr">S3_BUCKET_NAME:</span> <span class="string">&#x27;difyai&#x27;</span></span><br><span class="line">      <span class="attr">S3_ACCESS_KEY:</span> <span class="string">&#x27;ak-difyai&#x27;</span></span><br><span class="line">      <span class="attr">S3_SECRET_KEY:</span> <span class="string">&#x27;sk-difyai&#x27;</span></span><br><span class="line">      <span class="attr">S3_REGION:</span> <span class="string">&#x27;us-east-1&#x27;</span></span><br><span class="line">      <span class="comment"># The Azure Blob storage configurations, only available when STORAGE_TYPE is `azure-blob`.</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_ACCOUNT_NAME:</span> <span class="string">&#x27;difyai&#x27;</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_ACCOUNT_KEY:</span> <span class="string">&#x27;difyai&#x27;</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_CONTAINER_NAME:</span> <span class="string">&#x27;difyai-container&#x27;</span></span><br><span class="line">      <span class="attr">AZURE_BLOB_ACCOUNT_URL:</span> <span class="string">&#x27;https://&lt;your_account_name&gt;.blob.core.windows.net&#x27;</span></span><br><span class="line">      <span class="comment"># The type of vector store to use. Supported values are `weaviate`, `qdrant`, `milvus`, `relyt`.</span></span><br><span class="line">      <span class="attr">VECTOR_STORE:</span> <span class="string">weaviate</span></span><br><span class="line">      <span class="comment"># The Weaviate endpoint URL. Only available when VECTOR_STORE is `weaviate`.</span></span><br><span class="line">      <span class="attr">WEAVIATE_ENDPOINT:</span> <span class="string">http://weaviate:8080</span></span><br><span class="line">      <span class="comment"># The Weaviate API key.</span></span><br><span class="line">      <span class="attr">WEAVIATE_API_KEY:</span> <span class="string">WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih</span></span><br><span class="line">      <span class="comment"># The Qdrant endpoint URL. Only available when VECTOR_STORE is `qdrant`.</span></span><br><span class="line">      <span class="attr">QDRANT_URL:</span> <span class="string">http://qdrant:6333</span></span><br><span class="line">      <span class="comment"># The Qdrant API key.</span></span><br><span class="line">      <span class="attr">QDRANT_API_KEY:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="comment"># The Qdrant clinet timeout setting.</span></span><br><span class="line">      <span class="attr">QDRANT_CLIENT_TIMEOUT:</span> <span class="number">20</span></span><br><span class="line">      <span class="comment"># The Qdrant client enable gRPC mode.</span></span><br><span class="line">      <span class="attr">QDRANT_GRPC_ENABLED:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="comment"># The Qdrant server gRPC mode PORT.</span></span><br><span class="line">      <span class="attr">QDRANT_GRPC_PORT:</span> <span class="number">6334</span></span><br><span class="line">      <span class="comment"># Milvus configuration Only available when VECTOR_STORE is `milvus`.</span></span><br><span class="line">      <span class="comment"># The milvus host.</span></span><br><span class="line">      <span class="attr">MILVUS_HOST:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">      <span class="comment"># The milvus host.</span></span><br><span class="line">      <span class="attr">MILVUS_PORT:</span> <span class="number">19530</span></span><br><span class="line">      <span class="comment"># The milvus username.</span></span><br><span class="line">      <span class="attr">MILVUS_USER:</span> <span class="string">root</span></span><br><span class="line">      <span class="comment"># The milvus password.</span></span><br><span class="line">      <span class="attr">MILVUS_PASSWORD:</span> <span class="string">Milvus</span></span><br><span class="line">      <span class="comment"># The milvus tls switch.</span></span><br><span class="line">      <span class="attr">MILVUS_SECURE:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="comment"># Mail configuration, support: resend</span></span><br><span class="line">      <span class="attr">MAIL_TYPE:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># default send from email address, if not specified</span></span><br><span class="line">      <span class="attr">MAIL_DEFAULT_SEND_FROM:</span> <span class="string">&#x27;YOUR EMAIL FROM (eg: no-reply &lt;no-reply@dify.ai&gt;)&#x27;</span></span><br><span class="line">      <span class="comment"># the api-key for resend (https://resend.com)</span></span><br><span class="line">      <span class="attr">RESEND_API_KEY:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="attr">RESEND_API_URL:</span> <span class="string">https://api.resend.com</span></span><br><span class="line">      <span class="comment"># relyt configurations</span></span><br><span class="line">      <span class="attr">RELYT_HOST:</span> <span class="string">db</span></span><br><span class="line">      <span class="attr">RELYT_PORT:</span> <span class="number">5432</span></span><br><span class="line">      <span class="attr">RELYT_USER:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="attr">RELYT_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="attr">RELYT_DATABASE:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="comment"># Notion import configuration, support public and internal</span></span><br><span class="line">      <span class="attr">NOTION_INTEGRATION_TYPE:</span> <span class="string">public</span></span><br><span class="line">      <span class="attr">NOTION_CLIENT_SECRET:</span> <span class="string">you-client-secret</span></span><br><span class="line">      <span class="attr">NOTION_CLIENT_ID:</span> <span class="string">you-client-id</span></span><br><span class="line">      <span class="attr">NOTION_INTERNAL_SECRET:</span> <span class="string">you-internal-secret</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># Mount the storage directory to the container, for storing user files.</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./volumes/app/storage:/app/api/storage</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Frontend web application.</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">langgenius/dify-web:0.6.6</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># The base URL of console application api server, refers to the Console base URL of WEB service if console domain is</span></span><br><span class="line">      <span class="comment"># different from api or web app domain.</span></span><br><span class="line">      <span class="comment"># example: http://cloud.dify.ai</span></span><br><span class="line">      <span class="attr">CONSOLE_API_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># The URL for Web APP api server, refers to the Web App base URL of WEB service if web app domain is different from</span></span><br><span class="line">      <span class="comment"># console or api domain.</span></span><br><span class="line">      <span class="comment"># example: http://udify.app</span></span><br><span class="line">      <span class="attr">APP_API_URL:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">      <span class="comment"># The DSN for Sentry error reporting. If not set, Sentry error reporting will be disabled.</span></span><br><span class="line">      <span class="attr">SENTRY_DSN:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># uncomment to expose dify-web port to host</span></span><br><span class="line">    <span class="comment"># ports:</span></span><br><span class="line">    <span class="comment">#   - &quot;3000:3000&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The postgres database.</span></span><br><span class="line">  <span class="attr">db:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:15-alpine</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">PGUSER:</span> <span class="string">postgres</span></span><br><span class="line">      <span class="comment"># The password for the default postgres user.</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">difyai123456</span></span><br><span class="line">      <span class="comment"># The name of the default postgres database.</span></span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">dify</span></span><br><span class="line">      <span class="comment"># postgres data directory</span></span><br><span class="line">      <span class="attr">PGDATA:</span> <span class="string">/var/lib/postgresql/data/pgdata</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./volumes/db/data:/var/lib/postgresql/data</span></span><br><span class="line">    <span class="comment"># uncomment to expose db(postgresql) port to host</span></span><br><span class="line">    <span class="comment"># ports:</span></span><br><span class="line">    <span class="comment">#   - &quot;5432:5432&quot;</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [ <span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;pg_isready&quot;</span> ]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">1s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">3s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">30</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The redis cache.</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis:6-alpine</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># Mount the redis data directory to the container.</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./volumes/redis/data:/data</span></span><br><span class="line">    <span class="comment"># Set the redis password when startup redis server.</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">redis-server</span> <span class="string">--requirepass</span> <span class="string">difyai123456</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [ <span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;redis-cli&quot;</span>, <span class="string">&quot;ping&quot;</span> ]</span><br><span class="line">    <span class="comment"># uncomment to expose redis port to host</span></span><br><span class="line">    <span class="comment"># ports:</span></span><br><span class="line">    <span class="comment">#   - &quot;6379:6379&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The Weaviate vector store.</span></span><br><span class="line">  <span class="attr">weaviate:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">semitechnologies/weaviate:1.19.0</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># Mount the Weaviate data directory to the container.</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./volumes/weaviate:/var/lib/weaviate</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># The Weaviate configurations</span></span><br><span class="line">      <span class="comment"># You can refer to the [Weaviate](https://weaviate.io/developers/weaviate/config-refs/env-vars) documentation for more information.</span></span><br><span class="line">      <span class="attr">QUERY_DEFAULTS_LIMIT:</span> <span class="number">25</span></span><br><span class="line">      <span class="attr">AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED:</span> <span class="string">&#x27;false&#x27;</span></span><br><span class="line">      <span class="attr">PERSISTENCE_DATA_PATH:</span> <span class="string">&#x27;/var/lib/weaviate&#x27;</span></span><br><span class="line">      <span class="attr">DEFAULT_VECTORIZER_MODULE:</span> <span class="string">&#x27;none&#x27;</span></span><br><span class="line">      <span class="attr">CLUSTER_HOSTNAME:</span> <span class="string">&#x27;node1&#x27;</span></span><br><span class="line">      <span class="attr">AUTHENTICATION_APIKEY_ENABLED:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">AUTHENTICATION_APIKEY_ALLOWED_KEYS:</span> <span class="string">&#x27;WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih&#x27;</span></span><br><span class="line">      <span class="attr">AUTHENTICATION_APIKEY_USERS:</span> <span class="string">&#x27;hello@dify.ai&#x27;</span></span><br><span class="line">      <span class="attr">AUTHORIZATION_ADMINLIST_ENABLED:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">AUTHORIZATION_ADMINLIST_USERS:</span> <span class="string">&#x27;hello@dify.ai&#x27;</span></span><br><span class="line">    <span class="comment"># uncomment to expose weaviate port to host</span></span><br><span class="line">    <span class="comment"># ports:</span></span><br><span class="line">    <span class="comment">#  - &quot;8080:8080&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The DifySandbox</span></span><br><span class="line">  <span class="attr">sandbox:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">langgenius/dify-sandbox:0.1.0</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">cap_add:</span></span><br><span class="line">    <span class="comment"># Why is sys_admin permission needed?</span></span><br><span class="line">    <span class="comment"># https://docs.dify.ai/getting-started/install-self-hosted/install-faq#id-16.-why-is-sys_admin-permission-needed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">SYS_ADMIN</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># The DifySandbox configurations</span></span><br><span class="line">      <span class="attr">API_KEY:</span> <span class="string">dify-sandbox</span></span><br><span class="line">      <span class="attr">GIN_MODE:</span> <span class="string">release</span></span><br><span class="line">      <span class="attr">WORKER_TIMEOUT:</span> <span class="number">15</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Qdrant vector store.</span></span><br><span class="line">  <span class="comment"># uncomment to use qdrant as vector store.</span></span><br><span class="line">  <span class="comment"># (if uncommented, you need to comment out the weaviate service above,</span></span><br><span class="line">  <span class="comment"># and set VECTOR_STORE to qdrant in the api &amp; worker service.)</span></span><br><span class="line">  <span class="comment"># qdrant:</span></span><br><span class="line">  <span class="comment">#   image: langgenius/qdrant:v1.7.3</span></span><br><span class="line">  <span class="comment">#   restart: always</span></span><br><span class="line">  <span class="comment">#   volumes:</span></span><br><span class="line">  <span class="comment">#     - ./volumes/qdrant:/qdrant/storage</span></span><br><span class="line">  <span class="comment">#   environment:</span></span><br><span class="line">  <span class="comment">#     QDRANT_API_KEY: &#x27;difyai123456&#x27;</span></span><br><span class="line">  <span class="comment">#   # uncomment to expose qdrant port to host</span></span><br><span class="line">  <span class="comment">#   # ports:</span></span><br><span class="line">  <span class="comment">#   #  - &quot;6333:6333&quot;</span></span><br><span class="line">  <span class="comment">#   #  - &quot;6334:6334&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The nginx reverse proxy.</span></span><br><span class="line">  <span class="comment"># used for reverse proxying the API service and Web service.</span></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx:latest</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./nginx/nginx.conf:/etc/nginx/nginx.conf</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./nginx/proxy.conf:/etc/nginx/proxy.conf</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./nginx/conf.d:/etc/nginx/conf.d</span></span><br><span class="line">      <span class="comment">#- ./nginx/ssl:/etc/ssl</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">api</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">web</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;80:80&quot;</span></span><br><span class="line">      <span class="comment">#- &quot;443:443&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="项目Dify-on-WeChat的拉取与部署（改编自作者大佬的教程）"><a href="#项目Dify-on-WeChat的拉取与部署（改编自作者大佬的教程）" class="headerlink" title="项目Dify on WeChat的拉取与部署（改编自作者大佬的教程）"></a>项目Dify on WeChat的拉取与部署（改编自作者大佬的教程）</h3><p><strong>创建Dify基础编排聊天助手应用</strong></p>
+<p>登录成功后，进入Dify页面，我们按照下方步骤创建一个基础编排聊天助手应用</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/image-os7s.png"
+                      alt="image-os7s.png"
+                ></p>
 <ol>
-<li><strong>多标签界面</strong>：Windows Terminal 允许用户在一个窗口中打开多个标签，每个标签可以运行不同的命令行工具或 shell。</li>
-<li><strong>丰富的可定制选项</strong>：用户可以通过修改一个 JSON 文件来定制 Windows Terminal 的许多方面，包括字体、颜色方案、背景图片、透明度等。</li>
-<li><strong>GPU 加速文本渲染</strong>：Windows Terminal 使用 GPU 进行文本渲染，提供流畅且高效的用户体验。</li>
-<li><strong>Unicode 和 UTF-8 字符支持</strong>：Windows Terminal 支持显示各种 Unicode 字符和表情符号。</li>
-<li><strong>支持 PowerShell、命令提示符和 WSL</strong>：Windows Terminal 可以访问 Windows 系统中的各种命令行工具和 shell，包括 PowerShell、命令提示符和 WSL。</li>
+<li>点击页面上方的工作室</li>
+<li>创建空白应用</li>
+<li>应用类型选择聊天助手</li>
+<li>聊天助手编排方式选择基础编排</li>
+<li>选择应用图标并为应用填写一个名称，比如基础编排聊天助手</li>
+<li>点击创建</li>
 </ol>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>根据你安装的主题可能需要一个字体，来做适配，可以看你使用的主题的说明</p>
-<h3 id="其他准备"><a href="#其他准备" class="headerlink" title="其他准备"></a>其他准备</h3><p><strong>安装git</strong></p>
-<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">sudo apt install zsh</span><br><span class="line"></span><br><span class="line"># 将 zsh 设置为默认 shell</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"></span><br><span class="line"># 检查</span><br><span class="line">echo $SHELL</span><br><span class="line"># 返回 /usr/bin/zsh 即表示成功；若没成功，重启试试看</span><br></pre></td></tr></table></figure></div>
-
+<p>Dify的配置较为多样化，也可以参考官方的教程进行个性化配置</p>
+<p>在配置完成后，我们可以在右侧对话框进行测试，在测试完成后，进行如下操作</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/image-ejuk.png"
+                      alt="image-ejuk.png"
+                ></p>
 <ol>
-<li><p><strong>在 Ubuntu 或其他基于 Debian 的 Linux 系统上</strong>：</p>
-<p>首先，打开终端，然后使用 apt-get 命令安装 Zsh：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install zsh</span><br></pre></td></tr></table></figure></div>
-
-<p>安装完成后，你可以使用 <code>chsh</code> 命令来更改默认的 shell：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure></div>
-
-<p>然后，重新登录或重启你的计算机。</p>
-</li>
-<li><p><strong>在 Fedora 或其他基于 RPM 的 Linux 系统上</strong>：</p>
-<p>打开终端，然后使用 dnf 命令安装 Zsh：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dnf install zsh</span><br></pre></td></tr></table></figure></div>
-
-<p>同样，你可以使用 <code>chsh</code> 命令来更改默认的 shell：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure></div>
-
-<p>然后，重新登录或重启你的计算机。</p>
-</li>
-<li><p><strong>在 macOS 上</strong>：</p>
-<p>macOS Catalina（10.15）及更高版本默认使用 Zsh。如果你使用的是早期版本的 macOS，你可能需要手动安装 Zsh。你可以使用 Homebrew 来安装 Zsh：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install zsh</span><br></pre></td></tr></table></figure></div>
-
-<p>然后，你可以使用 <code>chsh</code> 命令来更改默认的 shell：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure></div>
-
-<p>然后，重新登录或重启你的计算机</p>
-<h3 id="配置文件地址"><a href="#配置文件地址" class="headerlink" title="配置文件地址"></a>配置文件地址</h3><p>默认在~&#x2F;.zshrc</p>
-<p>没有的话可以新建一个</p>
-</li>
+<li>发布</li>
+<li>更新</li>
+<li>访问API</li>
 </ol>
-<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh my zsh"></a>oh my zsh</h2><p><code>Oh My Zsh</code> 是一个开源的、社区驱动的框架，用于管理 Zsh 配置。它拥有大量的插件和主题，可以帮助用户定制他们的 Zsh 环境，使得命令行操作更加高效、友好。</p>
-<p>以下是如何在已经安装了 Zsh 的系统上安装 “Oh My Zsh”：</p>
-<ol>
-<li><p>首先，确保你的系统上已经安装了 <code>curl</code> 或 <code>wget</code>。如果没有，你可以使用你的包管理器（如 <code>apt</code> 或 <code>brew</code>）来安装。</p>
-</li>
-<li><p>然后，你可以使用 “Oh My Zsh” 的安装脚本来安装。你可以通过 <code>curl</code> 或 <code>wget</code> 来运行这个脚本：</p>
-<p>使用 <code>curl</code>：</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p>我们此时就获得到了<strong>api秘钥和服务器地址</strong></p>
+<h4 id="Docker进行部署"><a href="#Docker进行部署" class="headerlink" title="Docker进行部署"></a>Docker进行部署</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/hanfangyuan4396/dify-on-wechat</span><br><span class="line"><span class="built_in">cd</span> dify-on-wechat/docker       <span class="comment"># 进入docker目录</span></span><br><span class="line"><span class="comment"># 配置dify的API和服务器地址</span></span><br><span class="line">vi docker-compose.yml</span><br><span class="line"><span class="comment"># 我们配置environment字段即可</span></span><br><span class="line">environment:</span><br><span class="line">      DIFY_API_BASE: <span class="string">&#x27;浪浪云ip+对应的端口地址&#x27;</span></span><br><span class="line">      DIFY_API_KEY: <span class="string">&#x27;app-api-key&#x27;</span></span><br><span class="line">      DIFY_APP_TYPE: <span class="string">&#x27;chatbot&#x27;</span></span><br><span class="line">      MODEL: <span class="string">&#x27;dify&#x27;</span></span><br><span class="line">      SINGLE_CHAT_PREFIX: <span class="string">&#x27;[&quot;&quot;]&#x27;</span></span><br><span class="line">      SINGLE_CHAT_REPLY_PREFIX: <span class="string">&#x27;&quot;&quot;&#x27;</span></span><br><span class="line">      GROUP_CHAT_PREFIX: <span class="string">&#x27;[&quot;@bot&quot;]&#x27;</span></span><br><span class="line">      GROUP_NAME_WHITE_LIST: <span class="string">&#x27;[&quot;ALL_GROUP&quot;]&#x27;</span></span><br><span class="line"><span class="comment"># 字段详解</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line">&#123; </span><br><span class="line">  <span class="string">&quot;dify_api_base&quot;</span>: <span class="string">&quot;https://api.dify.ai/v1&quot;</span>,    <span class="comment"># dify base url</span></span><br><span class="line">  <span class="string">&quot;dify_api_key&quot;</span>: <span class="string">&quot;app-xxx&quot;</span>,                    <span class="comment"># dify api key</span></span><br><span class="line">  <span class="string">&quot;dify_app_type&quot;</span>: <span class="string">&quot;chatbot&quot;</span>,                   <span class="comment"># dify应用类型 chatbot(对应聊天助手)/agent(对应Agent)/workflow(对应工作流)，默认为chatbot</span></span><br><span class="line">  <span class="string">&quot;dify_convsersation_max_messages&quot;</span>: 5,         <span class="comment"># dify目前不支持设置历史消息长度，暂时使用超过最大消息数清空会话的策略，缺点是没有滑动窗口，会突然丢失历史消息, 当前为5</span></span><br><span class="line">  <span class="string">&quot;channel_type&quot;</span>: <span class="string">&quot;wx&quot;</span>,                         <span class="comment"># 通道类型，当前为个人微信</span></span><br><span class="line">  <span class="string">&quot;model&quot;</span>: <span class="string">&quot;dify&quot;</span>,                              <span class="comment"># 模型名称，当前对应dify平台</span></span><br><span class="line">  <span class="string">&quot;single_chat_prefix&quot;</span>: [<span class="string">&quot;&quot;</span>],                   <span class="comment"># 私聊时文本需要包含该前缀才能触发机器人回复</span></span><br><span class="line">  <span class="string">&quot;single_chat_reply_prefix&quot;</span>: <span class="string">&quot;&quot;</span>,               <span class="comment"># 私聊时自动回复的前缀，用于区分真人</span></span><br><span class="line">  <span class="string">&quot;group_chat_prefix&quot;</span>: [<span class="string">&quot;@bot&quot;</span>],                <span class="comment"># 群聊时包含该前缀则会触发机器人回复</span></span><br><span class="line">  <span class="string">&quot;group_name_white_list&quot;</span>: [<span class="string">&quot;ALL_GROUP&quot;</span>]        <span class="comment"># 机器人回复的群名称列表</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
-<p>或使用 <code>wget</code>：</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span></span><br></pre></td></tr></table></figure></div>
 
-<p>这个脚本将会自动下载并安装 “Oh My Zsh”，并且将你的默认 shell 设置为 Zsh。</p>
-</li>
-<li><p>安装完成后，你可以通过编辑 <code>~/.zshrc</code> 文件来定制你的 Zsh 环境。例如，你可以在这个文件中启用插件或更改主题]</p>
-<p>上面是官方的教程大概是这个意思，但是国内的话安装是有一点问题的</p>
-<p>oh_my_zsh 国内安装修改镜像 直连gitee官方源</p>
-<h4 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h4><h5 id="Install-oh-my-zsh-via-curl"><a href="#Install-oh-my-zsh-via-curl" class="headerlink" title="Install oh-my-zsh via curl"></a>Install oh-my-zsh via curl</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://gitee.com/Devkings/oh_my_zsh_install/raw/master/install.sh)&quot;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose up -d           <span class="comment"># 启动docker容器</span></span><br><span class="line">docker logs -f dify-on-wechat  <span class="comment"># 查看二维码并登录</span></span><br></pre></td></tr></table></figure></div>
 
-<h5 id="Install-oh-my-zsh-via-wget"><a href="#Install-oh-my-zsh-via-wget" class="headerlink" title="Install oh-my-zsh via wget"></a>Install oh-my-zsh via wget</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh -c &quot;$(wget https://gitee.com/Devkings/oh_my_zsh_install/raw/master/install.sh </span><br></pre></td></tr></table></figure></div></li>
-</ol>
-<h2 id="powerlevel10k"><a href="#powerlevel10k" class="headerlink" title="powerlevel10k"></a>powerlevel10k</h2><p>官方地址： <a class="link"   href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh" >romkatv&#x2F;powerlevel10k: A Zsh theme (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure></div>
+<blockquote>
+<p>如果作者大佬的项目对您有帮助请帮助大佬点一个star吧~</p>
+</blockquote>
+<h4 id="使用源码部署"><a href="#使用源码部署" class="headerlink" title="使用源码部署"></a>使用源码部署</h4><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#安装依赖</span></span><br><span class="line">pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple</span><br><span class="line"><span class="comment">#安装扩展依赖</span></span><br><span class="line">pip3 install -r requirements-optional.txt -i https://mirrors.aliyun.com/pypi/simple</span><br><span class="line"><span class="comment">#复制配置文件</span></span><br><span class="line"><span class="built_in">cp</span> config-template.json config.json</span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">python3 app.py</span><br></pre></td></tr></table></figure></div>
 
-<p>主题的设置：Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
-]]></content>
+
+
+<h3 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h3><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/1885614c166a66087c38350ae4406d8.jpg"
+                      alt="1885614c166a66087c38350ae4406d8.jpg" style="zoom:33%;" 
+                >
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/81d875498990f4d9e83c89b701b20f1.jpg"
+                      alt="81d875498990f4d9e83c89b701b20f1.jpg"
+                ></p>
+<p>服务器日志大概如下:</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://s3.langlangy.com/langlangyblog/image-vmd7.png"
+                      alt="image-vmd7.png"
+                ></p>
+<h1 id="四、Q-A"><a href="#四、Q-A" class="headerlink" title="四、Q&amp;A"></a>四、Q&amp;A</h1><h2 id="有什么问题可以进行提问，常见的问题我会总结为Q-A"><a href="#有什么问题可以进行提问，常见的问题我会总结为Q-A" class="headerlink" title="有什么问题可以进行提问，常见的问题我会总结为Q&amp;A"></a>有什么问题可以进行提问，常见的问题我会总结为Q&amp;A</h2><h1 id="五、应用案例搭建"><a href="#五、应用案例搭建" class="headerlink" title="五、应用案例搭建"></a>五、应用案例搭建</h1>]]></content>
       <categories>
-        <category>shell</category>
+        <category>Dify</category>
       </categories>
       <tags>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>哪吒监控搭建记录</title>
-    <url>/2024/05/07/%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="哪吒监控搭建记录"><a href="#哪吒监控搭建记录" class="headerlink" title="哪吒监控搭建记录"></a>哪吒监控搭建记录</h1><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><ol>
-<li>一台可以连接公网的 VPS，防火墙和安全策略需要放行 8008 和 5555 端口，否则会无法访问和无法接收数据。单核 512MB 内存的服务器配置就足以满足大多数使用场景</li>
-<li>一个已经设置好 A 记录，指向 Dashboard 服务器 ip 的域名</li>
-</ol>
-<blockquote>
-<p>TIP</p>
-<p>如果想使用 CDN，请准备两个域名，一个配置好 CDN 用作公开访问，CDN 需要支持WebSocket 协议；另一个域名不要使用 CDN，用作 Agent 端与 Dashboard 的通信</p>
-</blockquote>
-<p>3.一个 Github 账号</p>
-<h2 id="二、获取-Github-的-Client-ID-和密钥"><a href="#二、获取-Github-的-Client-ID-和密钥" class="headerlink" title="二、获取 Github 的 Client ID 和密钥"></a>二、获取 Github 的 Client ID 和密钥</h2><p>哪吒监控接入 Github、Gitlab、Gitee 作为后台管理员账号</p>
-<h2 id="三、在服务器中安装-Dashboard"><a href="#三、在服务器中安装-Dashboard" class="headerlink" title="三、在服务器中安装 Dashboard"></a>三、在服务器中安装 Dashboard</h2><ul>
-<li>在面板服务器中，运行安装脚本：</li>
-</ul>
-<p>bash</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh  -o nezha.sh &amp;&amp; chmod +x nezha.sh &amp;&amp; sudo ./nezha.sh</span><br></pre></td></tr></table></figure></div>
-
-<p>如果你的面板服务器位于中国大陆，可以使用镜像：</p>
-<p>bash</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -L https://gitee.com/naibahq/nezha/raw/master/script/install.sh -o nezha.sh &amp;&amp;</span><br></pre></td></tr></table></figure></div>
-
-<ul>
-<li><p>等待Docker安装完毕后，分别输入以下值：<br><code>OAuth提供商</code> - Github，Gitlab，Gitee 中选择一个<br><code>Client ID</code> - 之前保存的 Client ID<br><code>Client Secret</code> - 之前保存的密钥<br><code>用户名</code> - OAuth 提供商中的用户名<br><code>站点标题</code> - 自定义站点标题<br><code>访问端口</code> - 公开访问端口，可自定义，默认 8008<br><code>Agent的通信端口</code> - Agent 与 Dashboard 的通信端口，默认 5555</p>
-</li>
-<li><p>输入完成后，等待拉取镜像<br>安装结束后，如果一切正常，此时你可以访问域名+端口号，如 “<a class="link"   href="http://cdn.example.com:8008/" >http://cdn.example.com:8008 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>” 来查看面板</p>
-</li>
-<li><p>将来如果需要再次运行脚本，可以运行：</p>
-</li>
-</ul>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">./nezha.sh</span><br></pre></td></tr></table></figure></div>
-
-<p>来打开管理脚本</p>
-<p>此时就可以通过域名来访问哪吒监控了</p>
-<h2 id="四、最好通过docker进行安装"><a href="#四、最好通过docker进行安装" class="headerlink" title="四、最好通过docker进行安装"></a>四、最好通过docker进行安装</h2><h2 id="五、监控节点的安装"><a href="#五、监控节点的安装" class="headerlink" title="五、监控节点的安装"></a>五、监控节点的安装</h2><p>直接在面板的位置进行服务器的新增，然后使用一键安装即可</p>
-<h2 id="六、pve可能出现的问题"><a href="#六、pve可能出现的问题" class="headerlink" title="六、pve可能出现的问题"></a>六、pve可能出现的问题</h2><p>文件权限不足，需要进行提权</p>
-<h1 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h1><blockquote>
-<p>1.可以在管理端进行ssh链接，虽然的github进行了二次的验证但是我还是感觉不太安全</p>
-</blockquote>
-<p><strong>解决方案：</strong></p>
-<ol>
-<li>编辑 &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;nezha-agent.service</li>
-<li>在“ExecStart&#x3D; ”后加上 “–disable-command-execute”</li>
-<li>systemctl daemon-reload</li>
-<li>重启Agent</li>
-</ol>
-<blockquote>
-</blockquote>
-<h1 id="最后的效果"><a href="#最后的效果" class="headerlink" title="最后的效果"></a>最后的效果</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://pic.imgdb.cn/item/65fa527f9f345e8d0304af41.png"
-                     
-                ></p>
-]]></content>
-      <categories>
-        <category>搭建记录</category>
-      </categories>
-      <tags>
-        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -232,6 +210,155 @@
 ]]></content>
       <categories>
         <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>哪吒监控搭建记录</title>
+    <url>/2024/05/07/%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="哪吒监控搭建记录"><a href="#哪吒监控搭建记录" class="headerlink" title="哪吒监控搭建记录"></a>哪吒监控搭建记录</h1><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><ol>
+<li>一台可以连接公网的 VPS，防火墙和安全策略需要放行 8008 和 5555 端口，否则会无法访问和无法接收数据。单核 512MB 内存的服务器配置就足以满足大多数使用场景</li>
+<li>一个已经设置好 A 记录，指向 Dashboard 服务器 ip 的域名</li>
+</ol>
+<blockquote>
+<p>TIP</p>
+<p>如果想使用 CDN，请准备两个域名，一个配置好 CDN 用作公开访问，CDN 需要支持WebSocket 协议；另一个域名不要使用 CDN，用作 Agent 端与 Dashboard 的通信</p>
+</blockquote>
+<p>3.一个 Github 账号</p>
+<h2 id="二、获取-Github-的-Client-ID-和密钥"><a href="#二、获取-Github-的-Client-ID-和密钥" class="headerlink" title="二、获取 Github 的 Client ID 和密钥"></a>二、获取 Github 的 Client ID 和密钥</h2><p>哪吒监控接入 Github、Gitlab、Gitee 作为后台管理员账号</p>
+<h2 id="三、在服务器中安装-Dashboard"><a href="#三、在服务器中安装-Dashboard" class="headerlink" title="三、在服务器中安装 Dashboard"></a>三、在服务器中安装 Dashboard</h2><ul>
+<li>在面板服务器中，运行安装脚本：</li>
+</ul>
+<p>bash</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh  -o nezha.sh &amp;&amp; chmod +x nezha.sh &amp;&amp; sudo ./nezha.sh</span><br></pre></td></tr></table></figure></div>
+
+<p>如果你的面板服务器位于中国大陆，可以使用镜像：</p>
+<p>bash</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -L https://gitee.com/naibahq/nezha/raw/master/script/install.sh -o nezha.sh &amp;&amp;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>等待Docker安装完毕后，分别输入以下值：<br><code>OAuth提供商</code> - Github，Gitlab，Gitee 中选择一个<br><code>Client ID</code> - 之前保存的 Client ID<br><code>Client Secret</code> - 之前保存的密钥<br><code>用户名</code> - OAuth 提供商中的用户名<br><code>站点标题</code> - 自定义站点标题<br><code>访问端口</code> - 公开访问端口，可自定义，默认 8008<br><code>Agent的通信端口</code> - Agent 与 Dashboard 的通信端口，默认 5555</p>
+</li>
+<li><p>输入完成后，等待拉取镜像<br>安装结束后，如果一切正常，此时你可以访问域名+端口号，如 “<a class="link"   href="http://cdn.example.com:8008/" >http://cdn.example.com:8008 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>” 来查看面板</p>
+</li>
+<li><p>将来如果需要再次运行脚本，可以运行：</p>
+</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">./nezha.sh</span><br></pre></td></tr></table></figure></div>
+
+<p>来打开管理脚本</p>
+<p>此时就可以通过域名来访问哪吒监控了</p>
+<h2 id="四、最好通过docker进行安装"><a href="#四、最好通过docker进行安装" class="headerlink" title="四、最好通过docker进行安装"></a>四、最好通过docker进行安装</h2><h2 id="五、监控节点的安装"><a href="#五、监控节点的安装" class="headerlink" title="五、监控节点的安装"></a>五、监控节点的安装</h2><p>直接在面板的位置进行服务器的新增，然后使用一键安装即可</p>
+<h2 id="六、pve可能出现的问题"><a href="#六、pve可能出现的问题" class="headerlink" title="六、pve可能出现的问题"></a>六、pve可能出现的问题</h2><p>文件权限不足，需要进行提权</p>
+<h1 id="出现的问题"><a href="#出现的问题" class="headerlink" title="出现的问题"></a>出现的问题</h1><blockquote>
+<p>1.可以在管理端进行ssh链接，虽然的github进行了二次的验证但是我还是感觉不太安全</p>
+</blockquote>
+<p><strong>解决方案：</strong></p>
+<ol>
+<li>编辑 &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;nezha-agent.service</li>
+<li>在“ExecStart&#x3D; ”后加上 “–disable-command-execute”</li>
+<li>systemctl daemon-reload</li>
+<li>重启Agent</li>
+</ol>
+<blockquote>
+</blockquote>
+<h1 id="最后的效果"><a href="#最后的效果" class="headerlink" title="最后的效果"></a>最后的效果</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://pic.imgdb.cn/item/65fa527f9f345e8d0304af41.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>搭建记录</category>
+      </categories>
+      <tags>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>shell终端美化</title>
+    <url>/2024/05/08/shell%E7%BB%88%E7%AB%AF%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="打造酷帅的最强shell终端，效率直接快100倍！！！"><a href="#打造酷帅的最强shell终端，效率直接快100倍！！！" class="headerlink" title="打造酷帅的最强shell终端，效率直接快100倍！！！"></a>打造酷帅的最强shell终端，效率直接快100倍！！！</h1><h2 id="什么是shell？"><a href="#什么是shell？" class="headerlink" title="什么是shell？"></a>什么是shell？</h2><p>​		Shell 终端，也被称为命令行接口或控制台，是一种交互式用户界面，允许用户通过键入命令来与操作系统进行交互。</p>
+<p>​		在 Shell 终端中，用户可以执行各种各样的操作，例如管理文件和目录，运行程序，监控系统状态，配置系统设置，等等。这些操作都是通过键入特定的命令来实现的。</p>
+<p>​		Shell 终端的名称来源于 “shell”，这是一个用于描述用户和操作系统内核之间的接口的术语。Shell 提供了一个解释和执行用户命令的环境，而终端则是用户与 shell 交互的界面。</p>
+<p>​		在 Unix 和类 Unix 系统（如 Linux）中，常见的 shell 包括 Bourne shell（sh）、Bourne Again shell（bash）、C shell（csh）、Korn shell（ksh）等。在 Windows 系统中，常见的 shell 包括命令提示符（cmd）和 PowerShell。</p>
+<p>​		总的来说，Shell 终端是进行系统管理和开发工作的重要工具，对于理解操作系统的工作原理和进行高效的工作都非常有帮助。</p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>​		一个支持全彩的终端，我使用的是Windows terminal</p>
+<h3 id="Windows-terminal"><a href="#Windows-terminal" class="headerlink" title="Windows terminal"></a>Windows terminal</h3><p>​		Windows Terminal 是微软开发的一个新的、现代的、功能丰富的、开源的终端应用程序，用于访问命令行工具和 shell，如 Command Prompt、PowerShell 和 WSL (Windows Subsystem for Linux)。它于 2019 年首次发布，旨在提供一个集中的位置，用户可以访问多种命令行接口。</p>
+<p>以下是 Windows Terminal 的一些主要特性：</p>
+<ol>
+<li><strong>多标签界面</strong>：Windows Terminal 允许用户在一个窗口中打开多个标签，每个标签可以运行不同的命令行工具或 shell。</li>
+<li><strong>丰富的可定制选项</strong>：用户可以通过修改一个 JSON 文件来定制 Windows Terminal 的许多方面，包括字体、颜色方案、背景图片、透明度等。</li>
+<li><strong>GPU 加速文本渲染</strong>：Windows Terminal 使用 GPU 进行文本渲染，提供流畅且高效的用户体验。</li>
+<li><strong>Unicode 和 UTF-8 字符支持</strong>：Windows Terminal 支持显示各种 Unicode 字符和表情符号。</li>
+<li><strong>支持 PowerShell、命令提示符和 WSL</strong>：Windows Terminal 可以访问 Windows 系统中的各种命令行工具和 shell，包括 PowerShell、命令提示符和 WSL。</li>
+</ol>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>根据你安装的主题可能需要一个字体，来做适配，可以看你使用的主题的说明</p>
+<h3 id="其他准备"><a href="#其他准备" class="headerlink" title="其他准备"></a>其他准备</h3><p><strong>安装git</strong></p>
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line"></span><br><span class="line"># 安装</span><br><span class="line">sudo apt install zsh</span><br><span class="line"></span><br><span class="line"># 将 zsh 设置为默认 shell</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"></span><br><span class="line"># 检查</span><br><span class="line">echo $SHELL</span><br><span class="line"># 返回 /usr/bin/zsh 即表示成功；若没成功，重启试试看</span><br></pre></td></tr></table></figure></div>
+
+<ol>
+<li><p><strong>在 Ubuntu 或其他基于 Debian 的 Linux 系统上</strong>：</p>
+<p>首先，打开终端，然后使用 apt-get 命令安装 Zsh：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install zsh</span><br></pre></td></tr></table></figure></div>
+
+<p>安装完成后，你可以使用 <code>chsh</code> 命令来更改默认的 shell：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure></div>
+
+<p>然后，重新登录或重启你的计算机。</p>
+</li>
+<li><p><strong>在 Fedora 或其他基于 RPM 的 Linux 系统上</strong>：</p>
+<p>打开终端，然后使用 dnf 命令安装 Zsh：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo dnf install zsh</span><br></pre></td></tr></table></figure></div>
+
+<p>同样，你可以使用 <code>chsh</code> 命令来更改默认的 shell：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure></div>
+
+<p>然后，重新登录或重启你的计算机。</p>
+</li>
+<li><p><strong>在 macOS 上</strong>：</p>
+<p>macOS Catalina（10.15）及更高版本默认使用 Zsh。如果你使用的是早期版本的 macOS，你可能需要手动安装 Zsh。你可以使用 Homebrew 来安装 Zsh：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install zsh</span><br></pre></td></tr></table></figure></div>
+
+<p>然后，你可以使用 <code>chsh</code> 命令来更改默认的 shell：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">chsh -s $(which zsh)</span><br></pre></td></tr></table></figure></div>
+
+<p>然后，重新登录或重启你的计算机</p>
+<h3 id="配置文件地址"><a href="#配置文件地址" class="headerlink" title="配置文件地址"></a>配置文件地址</h3><p>默认在~&#x2F;.zshrc</p>
+<p>没有的话可以新建一个</p>
+</li>
+</ol>
+<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh my zsh"></a>oh my zsh</h2><p><code>Oh My Zsh</code> 是一个开源的、社区驱动的框架，用于管理 Zsh 配置。它拥有大量的插件和主题，可以帮助用户定制他们的 Zsh 环境，使得命令行操作更加高效、友好。</p>
+<p>以下是如何在已经安装了 Zsh 的系统上安装 “Oh My Zsh”：</p>
+<ol>
+<li><p>首先，确保你的系统上已经安装了 <code>curl</code> 或 <code>wget</code>。如果没有，你可以使用你的包管理器（如 <code>apt</code> 或 <code>brew</code>）来安装。</p>
+</li>
+<li><p>然后，你可以使用 “Oh My Zsh” 的安装脚本来安装。你可以通过 <code>curl</code> 或 <code>wget</code> 来运行这个脚本：</p>
+<p>使用 <code>curl</code>：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>或使用 <code>wget</code>：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>这个脚本将会自动下载并安装 “Oh My Zsh”，并且将你的默认 shell 设置为 Zsh。</p>
+</li>
+<li><p>安装完成后，你可以通过编辑 <code>~/.zshrc</code> 文件来定制你的 Zsh 环境。例如，你可以在这个文件中启用插件或更改主题]</p>
+<p>上面是官方的教程大概是这个意思，但是国内的话安装是有一点问题的</p>
+<p>oh_my_zsh 国内安装修改镜像 直连gitee官方源</p>
+<h4 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h4><h5 id="Install-oh-my-zsh-via-curl"><a href="#Install-oh-my-zsh-via-curl" class="headerlink" title="Install oh-my-zsh via curl"></a>Install oh-my-zsh via curl</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://gitee.com/Devkings/oh_my_zsh_install/raw/master/install.sh)&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="Install-oh-my-zsh-via-wget"><a href="#Install-oh-my-zsh-via-wget" class="headerlink" title="Install oh-my-zsh via wget"></a>Install oh-my-zsh via wget</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sh -c &quot;$(wget https://gitee.com/Devkings/oh_my_zsh_install/raw/master/install.sh </span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h2 id="powerlevel10k"><a href="#powerlevel10k" class="headerlink" title="powerlevel10k"></a>powerlevel10k</h2><p>官方地址： <a class="link"   href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh" >romkatv&#x2F;powerlevel10k: A Zsh theme (github.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure></div>
+
+<p>主题的设置：Set <code>ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;</code> in <code>~/.zshrc</code>.</p>
+]]></content>
+      <categories>
+        <category>shell</category>
       </categories>
       <tags>
         <tag>教程</tag>
