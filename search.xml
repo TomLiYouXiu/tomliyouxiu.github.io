@@ -49,7 +49,7 @@
 <h2 id="内存示意图"><a href="#内存示意图" class="headerlink" title="内存示意图"></a>内存示意图</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5Cimg%5Cimage-20240518155221787.png"
+                     data-src="/img/image-20240518155221787.png"
                       alt="image-20240518155409092"
                 ></p>
 <h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>在Python中变量也被称为对象的引用（reference）。变量存储的就是对象的地址。变量通过地址引用了对象。</p>
@@ -71,7 +71,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5Cimg%5Cimage-20240518163907680.png"
+                     data-src="/img/image-20240518163907680.png"
                       alt="image-20240518163907680"
                 ></p>
 <h2 id="python标识符命名规则"><a href="#python标识符命名规则" class="headerlink" title="python标识符命名规则"></a>python标识符命名规则</h2><p>开发中一般约定俗成遵守如下规则</p>
