@@ -252,7 +252,7 @@
   </entry>
   <entry>
     <title>python教学02.md</title>
-    <url>/2024/05/19/python%E6%95%99%E5%AD%A602-md/</url>
+    <url>/2024/05/19/python%E6%95%99%E5%AD%A602md/</url>
     <content><![CDATA[<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p>Python不支持常量，即没有语法规则限制改变一个常量的值。我们只能约定常量的命名规则，以及在程序的逻辑上不对常量的值做出修改</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">MAX_SPEED = <span class="number">120</span></span><br><span class="line"><span class="built_in">print</span>(MAX_SPEED)  <span class="comment"># 输出120</span></span><br><span class="line">MAX_SPEED = <span class="number">140</span>  <span class="comment"># 实际上是可以更改的，只能在逻辑上不进行更改</span></span><br><span class="line"><span class="built_in">print</span>(MAX_SPEED)  <span class="comment"># 输出140</span></span><br></pre></td></tr></table></figure></div>
 
