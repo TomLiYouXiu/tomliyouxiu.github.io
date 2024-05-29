@@ -251,8 +251,8 @@
       </tags>
   </entry>
   <entry>
-    <title>python教学02.md</title>
-    <url>/2024/05/19/python%E6%95%99%E5%AD%A602md/</url>
+    <title>python教学02</title>
+    <url>/2024/05/19/python%E6%95%99%E5%AD%A602/</url>
     <content><![CDATA[<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p>Python不支持常量，即没有语法规则限制改变一个常量的值。我们只能约定常量的命名规则，以及在程序的逻辑上不对常量的值做出修改</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">MAX_SPEED = <span class="number">120</span></span><br><span class="line"><span class="built_in">print</span>(MAX_SPEED)  <span class="comment"># 输出120</span></span><br><span class="line">MAX_SPEED = <span class="number">140</span>  <span class="comment"># 实际上是可以更改的，只能在逻辑上不进行更改</span></span><br><span class="line"><span class="built_in">print</span>(MAX_SPEED)  <span class="comment"># 输出140</span></span><br></pre></td></tr></table></figure></div>
 
@@ -446,7 +446,11 @@
 </tbody></table>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">a, b, c = <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span></span><br><span class="line"><span class="built_in">print</span>((a &lt; b) <span class="keyword">and</span> (b &lt; c))  <span class="comment"># 全为真则为真 true</span></span><br><span class="line"><span class="built_in">print</span>((a &lt; b) <span class="keyword">or</span> (b &gt; a))  <span class="comment"># 一个为真则为真 true</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> (b &gt; c))  <span class="comment"># 取反 true</span></span><br></pre></td></tr></table></figure></div>
 
-<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2>]]></content>
+<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><p>  所有的比较运算符返回1表示真，返回0表示假。这分别与特殊变量True和False等价</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 比较运算符</span></span><br><span class="line">a = <span class="number">4</span></span><br><span class="line"><span class="built_in">print</span>(a &lt;= <span class="number">30</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="number">3</span> &lt; a &lt; <span class="number">10</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a在3与10之间&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>按位运算符是把数字看做二进制来进行计算的。Python中按位运算法则同计科中的一样</p>
+]]></content>
       <categories>
         <category>Python</category>
       </categories>
