@@ -1,154 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>python教学01</title>
-    <url>/2024/05/18/python%E6%95%99%E5%AD%A601/</url>
-    <content><![CDATA[<h1 id="python程序基本格式"><a href="#python程序基本格式" class="headerlink" title="python程序基本格式"></a>python程序基本格式</h1><h2 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h2><ul>
-<li><p>恰当的空格，缩进问题</p>
-<ul>
-<li><p>逻辑行首的空白（空格和制表符）用来决定逻辑行的缩进层次，从而决定语句的分组</p>
-</li>
-<li><p>语句从新行的第一列开始</p>
-</li>
-</ul>
-</li>
-<li><p>缩进风格统一</p>
-<ul>
-<li><p>每个缩进层次都是固定的当个制表符或者4个空格</p>
-</li>
-<li><p>python用缩进而不是{}表示程序块的层次关系</p>
-</li>
-</ul>
-</li>
-<li><p>python 区分大小写</p>
-</li>
-</ul>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ul>
-<li>一定要写注释</li>
-<li>单行注释#</li>
-<li>多行注释 “””</li>
-</ul>
-<blockquote>
-<p>三个连续引号，其实就是定义了一个字符串。只不过没有没有变量指向，会被当做垃圾回收</p>
-</blockquote>
-<ul>
-<li>行连接符：\</li>
-</ul>
-<h1 id="对象的基本组成和内存示意图"><a href="#对象的基本组成和内存示意图" class="headerlink" title="对象的基本组成和内存示意图"></a>对象的基本组成和内存示意图</h1><h2 id="对象的组成"><a href="#对象的组成" class="headerlink" title="对象的组成"></a>对象的组成</h2><ul>
-<li>Python中一切皆对象</li>
-<li>每个对象都是由<ul>
-<li>1.标识：也就是对象的地址</li>
-<li>2.类型：对象存储的数据类型</li>
-<li>3.值：对象中所存储的真正的值</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>对象的本质就是：一个内存块，拥有特定的值，支持特定类型的相关操作</p>
-</blockquote>
-<h2 id="内存示意图"><a href="#内存示意图" class="headerlink" title="内存示意图"></a>内存示意图</h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/image-20240518155221787.png"
-                      alt="image-20240518155409092"
-                ></p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>在Python中变量也被称为对象的引用（reference）。变量存储的就是对象的地址。变量通过地址引用了对象。</p>
-<p>变量位于：栈内存（压栈出栈等细节，后续再讲）</p>
-<p>对象位于：堆内存中可以参考上面对应的内存示意图</p>
-<blockquote>
-<p>python 是动态类型语言变量不需要显式声明类型变量。根据变量引用的对象，Python解释器自动确定数据类型</p>
-</blockquote>
-<h1 id="标识符规则"><a href="#标识符规则" class="headerlink" title="标识符规则"></a>标识符规则</h1><ul>
-<li>区分大小写</li>
-<li>第一个字符必须是字母，下划线。其后的字符是：字母，数字，下划线</li>
-<li>不能使用关键字。</li>
-<li>以双下划线开头和结尾的名称通常有特殊含义，尽量避免这种写法</li>
-</ul>
-<blockquote>
-<p>使用Python的命令行查看系统关键字</p>
-<p>进入Python命令行</p>
-</blockquote>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/image-20240518163907680.png"
-                      alt="image-20240518163907680"
-                ></p>
-<h2 id="python标识符命名规则"><a href="#python标识符命名规则" class="headerlink" title="python标识符命名规则"></a>python标识符命名规则</h2><p>开发中一般约定俗成遵守如下规则</p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>规则</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>模块和包名</td>
-<td>全小写字母，尽量简单。若多个单词之间用下划线</td>
-<td>math，os，sys</td>
-</tr>
-<tr>
-<td>函数名</td>
-<td>全小写字母。若多个单词之间用下划线</td>
-<td>phone,my_name</td>
-</tr>
-<tr>
-<td>类名</td>
-<td>首字母大写，采用驼峰原则，多个单词时，每个单词第一个字母大写，其余部分小写</td>
-<td>MyPhone，MyClass，Phone</td>
-</tr>
-<tr>
-<td>常量名</td>
-<td>全大写字母，多个单词使用下划线隔开</td>
-<td>SPEED，MAX_SPEED</td>
-</tr>
-</tbody></table>
-<h1 id="变量和简单赋值语句"><a href="#变量和简单赋值语句" class="headerlink" title="变量和简单赋值语句"></a>变量和简单赋值语句</h1><h2 id="变量的声明和赋值"><a href="#变量的声明和赋值" class="headerlink" title="变量的声明和赋值"></a>变量的声明和赋值</h2><p>变量的声明和赋值：用于讲一个变量绑定到一个对象上，格式<code>变量名=表达式</code></p>
-<p> 最简单的表达式就是字面量。比如<code>a=123</code>。运算过程中，解释器先运行右边的表达式生成一个代表表达运算结果的对象，然后将这个对象地址赋值给左边的变量</p>
-<blockquote>
-<p>注意：变量在使用之前必须先要初始化（先赋值再使用）</p>
-</blockquote>
-<h2 id="删除变量和垃圾回收机制"><a href="#删除变量和垃圾回收机制" class="headerlink" title="删除变量和垃圾回收机制"></a>删除变量和垃圾回收机制</h2><ul>
-<li>可以通过del语句删除不再使用的变量</li>
-<li>如果对象没有变量引用，就会被垃圾回收器回收，清空内存空间</li>
-</ul>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#删除变量</span></span><br><span class="line">d = <span class="number">123</span></span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="keyword">del</span> d</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="comment">#报错如下：NameError: name &#x27;d&#x27; is not defined. Did you mean: &#x27;id&#x27;?</span></span><br></pre></td></tr></table></figure></div>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>docker源下载过慢解决办法</title>
-    <url>/2024/06/07/docker%E6%BA%90%E4%B8%8B%E8%BD%BD%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="首先换源"><a href="#首先换源" class="headerlink" title="首先换源"></a>首先换源</h1><p>换完源以后还是不能的下载的话参考下面的教程</p>
-<h1 id="DNS的修改"><a href="#DNS的修改" class="headerlink" title="DNS的修改"></a>DNS的修改</h1><p>通常我们知道，修改dns的几个途径</p>
-<ul>
-<li>&#x2F;etc&#x2F;resolv.conf</li>
-<li>&#x2F;etc&#x2F;netplan&#x2F;01-netcfg.yaml</li>
-</ul>
-<p>修改上面两个文件，一般情况下，可以解决，但是在一次使用新安装的ubuntu22.04的时候，发现，无论怎么修改，dig解析域名都是往127.0.0.53发送，哪怕在缓存中的已经生效</p>
-<p>在Docker容器拉取的过程中会发现无法进行容器的拉取，我们可以采用的方法就是修改DNS服务器</p>
-<p>首先查看DNS服务器是什么</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/resolv.conf</span><br><span class="line"><span class="comment">#直接进行编辑即可</span></span><br><span class="line">vim /etc/resolv.conf</span><br><span class="line"><span class="comment">#只需要更改nameserver中对应的DNS服务器地址即可</span></span><br></pre></td></tr></table></figure></div>
-
-<p>修改完对应的DNS服务器重启服务器即可</p>
-<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></div>
-
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>dify接入微信</title>
     <url>/2024/05/14/dify%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1/</url>
     <content><![CDATA[<h1 id="一、Dify简介"><a href="#一、Dify简介" class="headerlink" title="一、Dify简介"></a>一、Dify简介</h1><p><strong>项目官网</strong>：<a class="link"   href="https://dify.ai/zh" >Dify.AI · 生成式 AI 应用创新引擎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -270,6 +122,154 @@
 <h1 id="四、Q-A"><a href="#四、Q-A" class="headerlink" title="四、Q&amp;A"></a>四、Q&amp;A</h1><h2 id="有什么问题可以进行提问，常见的问题我会总结为Q-A"><a href="#有什么问题可以进行提问，常见的问题我会总结为Q-A" class="headerlink" title="有什么问题可以进行提问，常见的问题我会总结为Q&amp;A"></a>有什么问题可以进行提问，常见的问题我会总结为Q&amp;A</h2><h1 id="五、应用案例搭建"><a href="#五、应用案例搭建" class="headerlink" title="五、应用案例搭建"></a>五、应用案例搭建</h1>]]></content>
       <categories>
         <category>Dify</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker源下载过慢解决办法</title>
+    <url>/2024/06/07/docker%E6%BA%90%E4%B8%8B%E8%BD%BD%E8%BF%87%E6%85%A2%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="首先换源"><a href="#首先换源" class="headerlink" title="首先换源"></a>首先换源</h1><p>换完源以后还是不能的下载的话参考下面的教程</p>
+<h1 id="DNS的修改"><a href="#DNS的修改" class="headerlink" title="DNS的修改"></a>DNS的修改</h1><p>通常我们知道，修改dns的几个途径</p>
+<ul>
+<li>&#x2F;etc&#x2F;resolv.conf</li>
+<li>&#x2F;etc&#x2F;netplan&#x2F;01-netcfg.yaml</li>
+</ul>
+<p>修改上面两个文件，一般情况下，可以解决，但是在一次使用新安装的ubuntu22.04的时候，发现，无论怎么修改，dig解析域名都是往127.0.0.53发送，哪怕在缓存中的已经生效</p>
+<p>在Docker容器拉取的过程中会发现无法进行容器的拉取，我们可以采用的方法就是修改DNS服务器</p>
+<p>首先查看DNS服务器是什么</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/resolv.conf</span><br><span class="line"><span class="comment">#直接进行编辑即可</span></span><br><span class="line">vim /etc/resolv.conf</span><br><span class="line"><span class="comment">#只需要更改nameserver中对应的DNS服务器地址即可</span></span><br></pre></td></tr></table></figure></div>
+
+<p>修改完对应的DNS服务器重启服务器即可</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python教学01</title>
+    <url>/2024/05/18/python%E6%95%99%E5%AD%A601/</url>
+    <content><![CDATA[<h1 id="python程序基本格式"><a href="#python程序基本格式" class="headerlink" title="python程序基本格式"></a>python程序基本格式</h1><h2 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h2><ul>
+<li><p>恰当的空格，缩进问题</p>
+<ul>
+<li><p>逻辑行首的空白（空格和制表符）用来决定逻辑行的缩进层次，从而决定语句的分组</p>
+</li>
+<li><p>语句从新行的第一列开始</p>
+</li>
+</ul>
+</li>
+<li><p>缩进风格统一</p>
+<ul>
+<li><p>每个缩进层次都是固定的当个制表符或者4个空格</p>
+</li>
+<li><p>python用缩进而不是{}表示程序块的层次关系</p>
+</li>
+</ul>
+</li>
+<li><p>python 区分大小写</p>
+</li>
+</ul>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ul>
+<li>一定要写注释</li>
+<li>单行注释#</li>
+<li>多行注释 “””</li>
+</ul>
+<blockquote>
+<p>三个连续引号，其实就是定义了一个字符串。只不过没有没有变量指向，会被当做垃圾回收</p>
+</blockquote>
+<ul>
+<li>行连接符：\</li>
+</ul>
+<h1 id="对象的基本组成和内存示意图"><a href="#对象的基本组成和内存示意图" class="headerlink" title="对象的基本组成和内存示意图"></a>对象的基本组成和内存示意图</h1><h2 id="对象的组成"><a href="#对象的组成" class="headerlink" title="对象的组成"></a>对象的组成</h2><ul>
+<li>Python中一切皆对象</li>
+<li>每个对象都是由<ul>
+<li>1.标识：也就是对象的地址</li>
+<li>2.类型：对象存储的数据类型</li>
+<li>3.值：对象中所存储的真正的值</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>对象的本质就是：一个内存块，拥有特定的值，支持特定类型的相关操作</p>
+</blockquote>
+<h2 id="内存示意图"><a href="#内存示意图" class="headerlink" title="内存示意图"></a>内存示意图</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/image-20240518155221787.png"
+                      alt="image-20240518155409092"
+                ></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>在Python中变量也被称为对象的引用（reference）。变量存储的就是对象的地址。变量通过地址引用了对象。</p>
+<p>变量位于：栈内存（压栈出栈等细节，后续再讲）</p>
+<p>对象位于：堆内存中可以参考上面对应的内存示意图</p>
+<blockquote>
+<p>python 是动态类型语言变量不需要显式声明类型变量。根据变量引用的对象，Python解释器自动确定数据类型</p>
+</blockquote>
+<h1 id="标识符规则"><a href="#标识符规则" class="headerlink" title="标识符规则"></a>标识符规则</h1><ul>
+<li>区分大小写</li>
+<li>第一个字符必须是字母，下划线。其后的字符是：字母，数字，下划线</li>
+<li>不能使用关键字。</li>
+<li>以双下划线开头和结尾的名称通常有特殊含义，尽量避免这种写法</li>
+</ul>
+<blockquote>
+<p>使用Python的命令行查看系统关键字</p>
+<p>进入Python命令行</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/image-20240518163907680.png"
+                      alt="image-20240518163907680"
+                ></p>
+<h2 id="python标识符命名规则"><a href="#python标识符命名规则" class="headerlink" title="python标识符命名规则"></a>python标识符命名规则</h2><p>开发中一般约定俗成遵守如下规则</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>规则</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模块和包名</td>
+<td>全小写字母，尽量简单。若多个单词之间用下划线</td>
+<td>math，os，sys</td>
+</tr>
+<tr>
+<td>函数名</td>
+<td>全小写字母。若多个单词之间用下划线</td>
+<td>phone,my_name</td>
+</tr>
+<tr>
+<td>类名</td>
+<td>首字母大写，采用驼峰原则，多个单词时，每个单词第一个字母大写，其余部分小写</td>
+<td>MyPhone，MyClass，Phone</td>
+</tr>
+<tr>
+<td>常量名</td>
+<td>全大写字母，多个单词使用下划线隔开</td>
+<td>SPEED，MAX_SPEED</td>
+</tr>
+</tbody></table>
+<h1 id="变量和简单赋值语句"><a href="#变量和简单赋值语句" class="headerlink" title="变量和简单赋值语句"></a>变量和简单赋值语句</h1><h2 id="变量的声明和赋值"><a href="#变量的声明和赋值" class="headerlink" title="变量的声明和赋值"></a>变量的声明和赋值</h2><p>变量的声明和赋值：用于讲一个变量绑定到一个对象上，格式<code>变量名=表达式</code></p>
+<p> 最简单的表达式就是字面量。比如<code>a=123</code>。运算过程中，解释器先运行右边的表达式生成一个代表表达运算结果的对象，然后将这个对象地址赋值给左边的变量</p>
+<blockquote>
+<p>注意：变量在使用之前必须先要初始化（先赋值再使用）</p>
+</blockquote>
+<h2 id="删除变量和垃圾回收机制"><a href="#删除变量和垃圾回收机制" class="headerlink" title="删除变量和垃圾回收机制"></a>删除变量和垃圾回收机制</h2><ul>
+<li>可以通过del语句删除不再使用的变量</li>
+<li>如果对象没有变量引用，就会被垃圾回收器回收，清空内存空间</li>
+</ul>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#删除变量</span></span><br><span class="line">d = <span class="number">123</span></span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="keyword">del</span> d</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="comment">#报错如下：NameError: name &#x27;d&#x27; is not defined. Did you mean: &#x27;id&#x27;?</span></span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>Python</category>
       </categories>
       <tags>
         <tag>教程</tag>
@@ -658,38 +658,6 @@
       </tags>
   </entry>
   <entry>
-    <title>费曼学习法的自我认识</title>
-    <url>/2024/05/09/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95%E7%9A%84%E8%87%AA%E6%88%91%E8%AE%A4%E8%AF%86/</url>
-    <content><![CDATA[<h1 id="费曼学习方法的自我认识"><a href="#费曼学习方法的自我认识" class="headerlink" title="费曼学习方法的自我认识"></a>费曼学习方法的自我认识</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/feiman.jpg"
-                     
-                ></p>
-<p>认知会改变心理，心理会影响行为，主要是从这三点出发，进行分析和总结</p>
-<div class="tabs" id="tab-first-unique-name"><ul class="nav-tabs"><li class="tab active"><a class="#first-unique-name-1">认知</a></li><li class="tab"><a class="#first-unique-name-2">心理</a></li><li class="tab"><a class="#first-unique-name-3">Third Tab</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p>你就是要认为自己别人聪明，你的观众，你的学生都是笨蛋，你要想怎么教会他们，如果你能教会笨蛋的话，那么教会自己这么聪明的人就是非常简单 </p></div><div class="tab-pane" id="first-unique-name-2"><p>通过认知我们可以产生什么样的心理: </p>
-<p><strong>1.优越感（记住是正向的优越感）</strong></p>
-<p><strong>2.教学和教会学生的成就感</strong>.</p>
-<p><strong>3.增加自信心</strong></p></div><div class="tab-pane" id="first-unique-name-3"><p><strong>心理会影响行为，落实行为可以具体成某个或者某些行为</strong></p>
-<p><strong>比如：我们可以写讲义或者是博客。在此基础上通过现在流行的视频平台可以去做讲解视频</strong></p>
-<p><strong>可以先从基础讲解，用通俗易懂的方法去讲解</strong></p>
-<p><strong>再用高级的方法去讲解（串联起你的前后知识库），按照你的理解重排知识点，以观众更好理解的方式去进行讲解</strong></p></div></div></div>
-
-<p><strong>maki</strong>老师说了两句话让我觉得很好：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">决定一个函数从来不是当前值,而是斜率，哪怕你的值是很小，有向上的斜率，那么也是在进步</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">大部分厉害的数学家也都是优秀的教育家，不是因为他是一名好的数学家才教得好，而是本身是一名好的教育学家才更容易帮助他成为一名优秀的数学家</span><br><span class="line">发散一下这种思维，你要是想成为厉害的Coder，不妨先从写文档，出视频开始</span><br></pre></td></tr></table></figure></div>
-
-<p>两句话与诸君共勉</p>
-]]></content>
-      <categories>
-        <category>学习方法 - 费曼学习方法</category>
-      </categories>
-      <tags>
-        <tag>学习方法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>哪吒监控搭建记录</title>
     <url>/2024/05/07/%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="哪吒监控搭建记录"><a href="#哪吒监控搭建记录" class="headerlink" title="哪吒监控搭建记录"></a>哪吒监控搭建记录</h1><h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><ol>
@@ -750,6 +718,38 @@
       </categories>
       <tags>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>费曼学习法的自我认识</title>
+    <url>/2024/05/09/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95%E7%9A%84%E8%87%AA%E6%88%91%E8%AE%A4%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="费曼学习方法的自我认识"><a href="#费曼学习方法的自我认识" class="headerlink" title="费曼学习方法的自我认识"></a>费曼学习方法的自我认识</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/feiman.jpg"
+                     
+                ></p>
+<p>认知会改变心理，心理会影响行为，主要是从这三点出发，进行分析和总结</p>
+<div class="tabs" id="tab-first-unique-name"><ul class="nav-tabs"><li class="tab active"><a class="#first-unique-name-1">认知</a></li><li class="tab"><a class="#first-unique-name-2">心理</a></li><li class="tab"><a class="#first-unique-name-3">Third Tab</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p>你就是要认为自己别人聪明，你的观众，你的学生都是笨蛋，你要想怎么教会他们，如果你能教会笨蛋的话，那么教会自己这么聪明的人就是非常简单 </p></div><div class="tab-pane" id="first-unique-name-2"><p>通过认知我们可以产生什么样的心理: </p>
+<p><strong>1.优越感（记住是正向的优越感）</strong></p>
+<p><strong>2.教学和教会学生的成就感</strong>.</p>
+<p><strong>3.增加自信心</strong></p></div><div class="tab-pane" id="first-unique-name-3"><p><strong>心理会影响行为，落实行为可以具体成某个或者某些行为</strong></p>
+<p><strong>比如：我们可以写讲义或者是博客。在此基础上通过现在流行的视频平台可以去做讲解视频</strong></p>
+<p><strong>可以先从基础讲解，用通俗易懂的方法去讲解</strong></p>
+<p><strong>再用高级的方法去讲解（串联起你的前后知识库），按照你的理解重排知识点，以观众更好理解的方式去进行讲解</strong></p></div></div></div>
+
+<p><strong>maki</strong>老师说了两句话让我觉得很好：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">决定一个函数从来不是当前值,而是斜率，哪怕你的值是很小，有向上的斜率，那么也是在进步</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">大部分厉害的数学家也都是优秀的教育家，不是因为他是一名好的数学家才教得好，而是本身是一名好的教育学家才更容易帮助他成为一名优秀的数学家</span><br><span class="line">发散一下这种思维，你要是想成为厉害的Coder，不妨先从写文档，出视频开始</span><br></pre></td></tr></table></figure></div>
+
+<p>两句话与诸君共勉</p>
+]]></content>
+      <categories>
+        <category>学习方法 - 费曼学习方法</category>
+      </categories>
+      <tags>
+        <tag>学习方法</tag>
       </tags>
   </entry>
 </search>
